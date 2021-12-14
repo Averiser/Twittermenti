@@ -16,6 +16,7 @@
 		E4DC78442764A911007CC006 /* TweetSentimentClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E4DC78432764A911007CC006 /* TweetSentimentClassifier.mlmodel */; };
 		E4DC7858276698E9007CC006 /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC784E27669861007CC006 /* SwifteriOS.framework */; };
 		E4DC7859276698E9007CC006 /* SwifteriOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC784E27669861007CC006 /* SwifteriOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E4DC785C2768AC1B007CC006 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4DC785B2768AC1A007CC006 /* Secrets.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		AD9EC66120FE319A002AE9BF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E4DC78432764A911007CC006 /* TweetSentimentClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TweetSentimentClassifier.mlmodel; sourceTree = "<group>"; };
 		E4DC784527669861007CC006 /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swifter.xcodeproj; path = "../../../../../Downloads/Swifter-master/Swifter.xcodeproj"; sourceTree = "<group>"; };
+		E4DC785B2768AC1A007CC006 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				AD9EC65620FE2EF7002AE9BF /* Assets.xcassets */,
 				AD9EC65820FE2EF7002AE9BF /* LaunchScreen.storyboard */,
 				AD9EC65B20FE2EF7002AE9BF /* Info.plist */,
+				E4DC785B2768AC1A007CC006 /* Secrets.plist */,
 			);
 			path = Twittermenti;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD9EC65A20FE2EF7002AE9BF /* LaunchScreen.storyboard in Resources */,
+				E4DC785C2768AC1B007CC006 /* Secrets.plist in Resources */,
 				AD9EC65720FE2EF7002AE9BF /* Assets.xcassets in Resources */,
 				AD9EC66220FE319B002AE9BF /* README.md in Resources */,
 				AD9EC65520FE2EF4002AE9BF /* Main.storyboard in Resources */,
