@@ -16,13 +16,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var sentimentLabel: UILabel!
   
   let swifter = Swifter(consumerKey: "zUPScrl6hhnSuuGCb8f58SrFT", consumerSecret: "OcGxFQtrnPLxPF4d6xqn0KJnPLm403cLwHm1IxgSTjWcIILfsQ")
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()
       
-      swifter.searchTweet(using: "@Apple") { results, metadata in
+      swifter.searchTweet(using: "@Apple", lang: "en", count: 100, tweetMode: .extended, success: { (results, metadata) in
         print(results)
-      } failure: { error in
+      }) { (error) in
         print("There was an error with the Twitter API Request, \(error)")
       }
 
