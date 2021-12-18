@@ -25,8 +25,13 @@ class ViewController: UIViewController {
       override func viewDidLoad() {
           super.viewDidLoad()
         
+      }
+
+    @IBAction func predictPressed(_ sender: Any) {
+    
+      if let searchText = textField.text {
         
-        swifter.searchTweet(using: "#blessed", lang: "en", count: 100, tweetMode: .extended, success: { (results, metadata) in
+        swifter.searchTweet(using: searchText, lang: "en", count: 100, tweetMode: .extended, success: { (results, metadata) in
           
           var tweets = [TweetSentimentClassifierInput]()
           
@@ -53,7 +58,22 @@ class ViewController: UIViewController {
               }
             }
             
-            print(sentimentScore)
+            if sentimentScore > 20 {
+              self.sentimentLabel.text = "😍"
+            } else if sentimentScore > 10 {
+              self.sentimentLabel.text = "😀"
+            } else if sentimentScore > 0 {
+              self.sentimentLabel.text = "🙂"
+            } else if sentimentScore == 0 {
+              self.sentimentLabel.text = "😐"
+            } else if sentimentScore < 0 {
+              self.sentimentLabel.text = "🙁"
+            } else if sentimentScore < -10 {
+              self.sentimentLabel.text = "😭"
+            } else {
+              self.sentimentLabel.text = "😱"
+            }
+          
             
             
           } catch {
@@ -64,13 +84,9 @@ class ViewController: UIViewController {
         }) { (error) in
           print("There was an error with the Twitter API Request, \(error)")
         }
-
-          
       }
-
-    @IBAction func predictPressed(_ sender: Any) {
-    
-    
+      
+      
     }
     
 }
